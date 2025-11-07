@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Users/jonatas.debastiane/Downloads/eclipse-jee-2025-06-R-win32-x86_64/eclipse/plugins/jakarta.servlet-api_6.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jonatas.debastiane/Documents/mysql-connector-j-9.3.0/mysql-connector-j-9.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jonatas.debastiane/Downloads/jbcrypt-0.4 (1).jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
