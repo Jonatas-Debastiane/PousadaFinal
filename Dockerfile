@@ -60,9 +60,9 @@ RUN rm -rf /usr/local/tomcat/webapps/ROOT
 
 # Copia arquivos da aplicação compilada 
 
-COPY src/main/webapp /usr/local/tomcat/webapps/AgendaServlet/ 
+COPY src/main/webapp /usr/local/tomcat/webapps/Pousada_Final/ 
 
-COPY --from=build /app/build/classes /usr/local/tomcat/webapps/AgendaServlet/WEB-INF/classes 
+COPY --from=build /app/build/classes /usr/local/tomcat/webapps/Pousada_Final/WEB-INF/classes 
 
  
 
