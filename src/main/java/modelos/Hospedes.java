@@ -1,6 +1,7 @@
 package modelos;
 
 public class Hospedes {
+    
     private int idHospede;
     private String nome;
     private String senha;
@@ -15,6 +16,8 @@ public class Hospedes {
         this.telefone = telefone;
         this.email = email;
     }
+
+    // --- Getters e Setters ---
 
     public int getIdHospede() {
         return idHospede;
@@ -62,4 +65,3 @@ public class Hospedes {
                ", Telefone=" + telefone + ", Email=" + email + "]";
     }
 }
-

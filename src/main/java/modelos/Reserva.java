@@ -1,62 +1,65 @@
 package modelos;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
-
-public class Reserva {
+public class Reserva{
+    
     private int idReserva;
     private int idHospede;
     private int idQuarto;
-    private LocalDate dataEntrada;
-    private LocalDate dataSaida;
-    private int qtdHospedes;
+    private Date dataCheckin;
+    private Date dataCheckout;
+    private String status;
+    private int numAdultos;    
+    private int numCriancas;
+    private double valorTotal; 
+    
+    // Novo campo para armazenar o objeto Quarto associado
+    private Quartos quarto; 
 
-    // Getters e Setters
-    public int getIdReserva() {
-        return idReserva;
-    }
+    public Reserva() {}
 
-    public void setIdReserva(int idReserva) {
-        this.idReserva = idReserva;
-    }
-
-    public int getIdHospede() {
-        return idHospede;
-    }
-
-    public void setIdHospede(int idHospede) {
+   
+    public Reserva(int idHospede, int idQuarto, Date dataCheckin, Date dataCheckout, String status, int numAdultos, int numCriancas, double valorTotal) {
         this.idHospede = idHospede;
-    }
-
-    public int getIdQuarto() {
-        return idQuarto;
-    }
-
-    public void setIdQuarto(int idQuarto) {
         this.idQuarto = idQuarto;
+        this.dataCheckin = dataCheckin;
+        this.dataCheckout = dataCheckout;
+        this.status = status;
+        this.numAdultos = numAdultos;
+        this.numCriancas = numCriancas;
+        this.valorTotal = valorTotal;
     }
+    
+    
+    public int getIdReserva() { return idReserva; }
+    public void setIdReserva(int idReserva) { this.idReserva = idReserva; }
+    
+    public int getIdHospede() { return idHospede; }
+    public void setIdHospede(int idHospede) { this.idHospede = idHospede; }
+    
+    public int getIdQuarto() { return idQuarto; }
+    public void setIdQuarto(int idQuarto) { this.idQuarto = idQuarto; }
+    
+    public Date getDataCheckin() { return dataCheckin; }
+    public void setDataCheckin(Date dataCheckin) { this.dataCheckin = dataCheckin; }
+    
+    public Date getDataCheckout() { return dataCheckout; }
+    public void setDataCheckout(Date dataCheckout) { this.dataCheckout = dataCheckout; }
+    
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
 
-    public LocalDate getDataEntrada() {
-        return dataEntrada;
-    }
+    public int getNumAdultos() { return numAdultos; }
+    public void setNumAdultos(int numAdultos) { this.numAdultos = numAdultos; }
 
-    public void setDataEntrada(LocalDate dataEntrada) {
-        this.dataEntrada = dataEntrada;
-    }
+    public int getNumCriancas() { return numCriancas; }
+    public void setNumCriancas(int numCriancas) { this.numCriancas = numCriancas; }
 
-    public LocalDate getDataSaida() {
-        return dataSaida;
-    }
-
-    public void setDataSaida(LocalDate dataSaida) {
-        this.dataSaida = dataSaida;
-    }
-
-    public int getQtdHospedes() {
-        return qtdHospedes;
-    }
-
-    public void setQtdHospedes(int qtdHospedes) {
-        this.qtdHospedes = qtdHospedes;
-    }
+    public double getValorTotal() { return valorTotal; }
+    public void setValorTotal(double valorTotal) { this.valorTotal = valorTotal; }
+    
+    // Novos getters e setters para o objeto Quarto
+    public Quartos getQuarto() { return quarto; }
+    public void setQuarto(Quartos quarto) { this.quarto = quarto; }
 }

@@ -42,6 +42,7 @@ public class LoginServlet extends HttpServlet {
 				hospedeLogado = hospedeDAO.Login(email, senha);
 
 				if (hospedeLogado != null) {
+					
 					// ✅ Login bem-sucedido → cria sessão
 					HttpSession session = request.getSession();
 					session.setAttribute("usuarioLogado", hospedeLogado);

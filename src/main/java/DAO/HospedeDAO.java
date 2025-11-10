@@ -66,10 +66,7 @@ public class HospedeDAO {
         return hospedes;
     }
 
-    /**
-     * Realiza o login verificando o e-mail e a senha.
-     * Compara a senha digitada com o hash armazenado usando BCrypt.
-     */
+  
     public Hospedes Login(String email, String senha) {
         Hospedes hospede = null;
 
@@ -97,7 +94,6 @@ public class HospedeDAO {
             throw new RuntimeException("Erro ao fazer login: " + e.getMessage());
         }
 
-        // Retorna o hóspede logado (ou null se falhar)
         return hospede;
     }
 }
