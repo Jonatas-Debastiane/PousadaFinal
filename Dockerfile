@@ -60,10 +60,12 @@ RUN rm -rf /usr/local/tomcat/webapps/ROOT
 
 # Copia arquivos da aplicação compilada 
 
-COPY src/main/webapp /usr/local/tomcat/webapps/Pousada_Final/ 
+#COPY src/main/webapp /usr/local/tomcat/webapps/Pousada_Final/ 
 
-COPY --from=build /app/build/classes /usr/local/tomcat/webapps/Pousada_Final/WEB-INF/classes 
+#COPY --from=build /app/build/classes /usr/local/tomcat/webapps/Pousada_Final/WEB-INF/classes 
+COPY src/main/webapp /usr/local/tomcat/webapps/ROOT/ 
 
+COPY --from=build /app/build/classes /usr/local/tomcat/webapps/ROOT/WEB-INF/classes 
  
 
 # Expõe a porta padrão do Tomcat 
